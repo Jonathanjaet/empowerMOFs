@@ -1,0 +1,260 @@
+:root{
+    --titles:#F04266;
+    --textSecondary:rgb(253, 233, 191);
+    --subtitles: #4F2028;
+    --main3: #7C2C68;
+}
+
+/*Globales*/
+html{
+    font-size: 62.5%;
+    box-sizing: border-box; /*Hack Box model*/
+    scroll-snap-type: y mandatory;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    font-size: 16px; /*1rem  = 10px*/
+}
+.montserrat-normal {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat-semib {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.montserrat-extrab {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.montserrat-italic {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+
+h3{
+    font-size: 1.8rem;
+}
+
+h4{
+    font-size: 1.5rem;
+}
+.centerList{
+    display: block;
+    justify-content: center;
+    overflow: hidden;
+}
+.titlemain h1{
+    margin-top: 6rem;
+    margin-bottom: 0;
+    padding-left: 6rem;
+    font-size: 5rem;
+    text-align: left;
+    color: var(--titles);
+}
+.titlemain h2{
+    margin: 0;
+    padding-left: 6rem;
+    font-size: 6rem;
+    text-align: left;
+    color: var(--textSecondary);
+}
+.titlemain h3{
+    margin-top: 6rem;
+    margin-bottom: 0;
+    padding-left: 6rem;
+    font-size: 2.5rem;
+    text-align: left;
+    color: var(--subtitles);
+}
+.text-style{
+    font-size: 2rem;
+    color:var(--textSecondary);   
+}
+.text-style p{
+    padding-left: 6rem;
+    align-items: left;
+}
+.text-syle span{
+    font-size: 2rem;
+}
+
+.text-style ul{
+
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+.text-style li{
+    align-items: center;
+    color: var(--titles);
+}
+.center-text{
+    text-align: center;
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 20px;
+}
+.contenedor a{
+    text-decoration: none;
+    font-weight: 700;
+    color:var(--cyan);
+}
+
+h2 .kaomoji{
+    font-size: 1.5rem;
+}
+/*Sizes*/
+.w-sm-100{
+    width: 100%;
+}
+@media (min-width: 780px) {
+    .w-sm-100{
+        width: auto;
+    }
+}
+.w-sm-25{
+    width: 5%;
+}
+@media (min-width: 780px) {
+    .w-sm-25{
+        width: auto;
+    }
+}
+.flex{
+    display: flex;
+}
+
+.al-right {
+    justify-content: flex-start;
+}
+
+/* General navbar styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;  /* Add some top and bottom padding */
+  }
+  
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;  /* Remove default margin */
+    display: flex;
+  }
+  
+  .navbar li {
+    margin-right: 1.5rem; /* Use rem for better responsiveness */
+  }
+  
+  .navbar a {
+    color: var(--textSecondary);
+    font-size: 1.6rem;
+    padding: 1rem;
+    text-decoration: none;
+  }
+  
+  /* Active link style */
+  .navbar .active {
+    cursor: default;
+    font-weight: bold;
+    color: var(--subtitles);
+  }
+  
+  /* Responsive behavior using media queries */
+  @media (max-width: 768px) {
+    /* Hide the logo on smaller screens */
+    .left-picture {
+      display: none;
+    }
+  
+    /* Stack navbar elements vertically */
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar ul {
+      margin-top: 1rem; /* Add space between logo and list */
+    }
+  }
+  
+  @media (min-width: 768px) {
+    /* Show the logo on larger screens */
+    .left-picture {
+      display: block;
+      float: left; /* Maintain existing styling */
+      margin-right: 20px;
+      max-width: 100%; /* Ensure image scales responsively */
+      width: 25rem;
+    }
+  }
+  
+
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+}
+.contenedorfoot {
+    width: 20rem;
+    margin: 0 auto;
+}
+
+/*No reapeat same image*/
+.indexImage{
+    background-image: url(../img/fondo1-01.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+
+.backgroundImage{
+    background-image: url(../img/fondo-1-color-01.jpg);
+    background-position:top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.motifImage{
+    background-image: url(../img/fondo2-01.jpg);
+    background-position:top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.programImage{
+    background-image: url(../img/fondo-2-color-01.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.referencesImage{
+    background-color: var(--textSecondary);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
