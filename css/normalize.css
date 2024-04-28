@@ -192,12 +192,14 @@
    * Correct the inability to style clickable types in iOS and Safari.
    */
   
-  button,
-  [type="button"],
-  [type="reset"],
-  [type="submit"] {
-    webkit-appearance: none;
-  }
+   button,
+   [type="button"],
+   [type="reset"],
+   [type="submit"] {
+     -webkit-appearance: none; /*  WebKit */
+     appearance: none; /*  standard */
+   }
+   
   
   /**
    * Remove the inner border and padding in Firefox.
@@ -287,9 +289,10 @@
    * 2. Correct the outline style in Safari.
    */
   
-  [type="search"] {
-    -webkit-appearance: textfield; /* 1 */
-    outline-offset: -2px; /* 2 */
+   [type="search"] {
+    -webkit-appearance: textfield; /*  WebKit */
+    appearance: textfield; /*  standard */
+    outline-offset: -2px; /*  webrowsers */
   }
   
   /**

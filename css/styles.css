@@ -45,20 +45,6 @@ body{
   font-style: italic;
 }
 
-h1{
-    font-size: 3.8rem;
-}
-h2{
-    font-size: 2.8rem;
-}
-
-h3{
-    font-size: 1.8rem;
-}
-
-h4{
-    font-size: 1.5rem;
-}
 .centerList{
     display: block;
     justify-content: center;
@@ -122,33 +108,6 @@ h4{
     color:var(--cyan);
 }
 
-h2 .kaomoji{
-    font-size: 1.5rem;
-}
-/*Sizes*/
-.w-sm-100{
-    width: 100%;
-}
-@media (min-width: 780px) {
-    .w-sm-100{
-        width: auto;
-    }
-}
-.w-sm-25{
-    width: 5%;
-}
-@media (min-width: 780px) {
-    .w-sm-25{
-        width: auto;
-    }
-}
-.flex{
-    display: flex;
-}
-
-.al-right {
-    justify-content: flex-start;
-}
 
 /* General navbar styles */
 .navbar {
@@ -183,8 +142,9 @@ h2 .kaomoji{
     color: var(--subtitles);
   }
   
-  /* Responsive behavior using media queries */
-  @media (max-width: 768px) {
+  
+/* Responsive behavior using media queries */
+@media (max-width: 768px) {
     /* Hide the logo on smaller screens */
     .left-picture {
       display: none;
@@ -199,9 +159,26 @@ h2 .kaomoji{
     .navbar ul {
       margin-top: 1rem; /* Add space between logo and list */
     }
-  }
+
+    /* Adjust font sizes for smaller screens */
+    .titlemain h1{
+        font-size: 3rem;
+    }
+    .titlemain h2{
+        font-size: 4rem;
+    }
+    .titlemain h3{
+        font-size: 1.5rem;
+    }
+    .text-style{
+        font-size: 1.5rem;   
+    }
+    .text-syle span{
+        font-size: 1.5rem;
+    }
+}
   
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
     /* Show the logo on larger screens */
     .left-picture {
       display: block;
@@ -210,18 +187,8 @@ h2 .kaomoji{
       max-width: 100%; /* Ensure image scales responsively */
       width: 25rem;
     }
-  }
+}
   
-
-
-.foot {
-    display: flex;
-    justify-content: space-between;
-}
-.contenedorfoot {
-    width: 20rem;
-    margin: 0 auto;
-}
 
 /*No reapeat same image*/
 .indexImage{
@@ -232,7 +199,6 @@ h2 .kaomoji{
     background-attachment: fixed;
 
 }
-
 
 .backgroundImage{
     background-image: url(../img/fondo-1-color-01.jpg);
