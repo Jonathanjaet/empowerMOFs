@@ -1,102 +1,134 @@
-:root{
-    --titles:#F04266;
-    --textSecondary:rgb(253, 233, 191);
+:root {
+    --titles: #F04266;
+    --textSecondary: rgb(253, 233, 191);
     --subtitles: #4F2028;
     --main3: #7C2C68;
-}
-
-/*Globales*/
-html{
-    font-size: 62.5%;
-    box-sizing: border-box; /*Hack Box model*/
+  }
+  
+  /* Globales */
+  html {
+    font-size: 62.5%; /* 1rem = 10px */
+    box-sizing: border-box; /* Hack Box model */
     scroll-snap-type: y mandatory;
-}
-*, *:before, *:after {
+  }
+  
+  *,
+  *:before,
+  *:after {
     box-sizing: inherit;
-}
-body{
-    font-size: 16px; /*1rem  = 10px*/
-}
-.montserrat-normal {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.montserrat-semib {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.montserrat-extrab {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.montserrat-italic {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.centerList{
+  }
+  
+  body {
+    font-size: 16px; /* 1rem = 10px */
+    margin: 0; /* Remove default body margin */
+    font-family: 'Montserrat', sans-serif; /* Set Montserrat as the main font */
+  }
+  
+  .montserrat-normal,
+  .montserrat-semib,
+  .montserrat-extrab,
+  .montserrat-italic {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: inherit;
+    font-style: inherit;
+  }
+  
+  .montserrat-normal {
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .montserrat-semib {
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .montserrat-extrab {
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .montserrat-italic {
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .titlemain h1,
+    .titlemain h2,
+    .titlemain h3 {
+      padding-left: 2rem;
+      font-size: calc(1.5rem + 1vw); /* Adjust font size based on viewport width */
+    }
+  
+    .text-style {
+      font-size: 1.2rem;
+    }
+  
+    .text-style ul {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  }
+  
+  /* Existing Styles */
+  .centerList {
     display: block;
     justify-content: center;
     overflow: hidden;
-}
-.titlemain h1{
+  }
+  
+  .titlemain h1 {
     margin-top: 6rem;
     margin-bottom: 0;
-    padding-left: 6rem;
-    font-size: 5rem;
     text-align: left;
     color: var(--titles);
-}
-.titlemain h2{
+  }
+  
+  .titlemain h2 {
     margin: 0;
-    padding-left: 6rem;
-    font-size: 6rem;
     text-align: left;
     color: var(--textSecondary);
-}
-.titlemain h3{
+  }
+  
+  .titlemain h3 {
     margin-top: 6rem;
     margin-bottom: 0;
-    padding-left: 6rem;
-    font-size: 2.5rem;
     text-align: left;
     color: var(--subtitles);
-}
-.text-style{
+  }
+  
+  .text-style {
     font-size: 2rem;
-    color:var(--textSecondary);   
-}
-.text-style p{
+    color: var(--textSecondary);
+  }
+  
+  .text-style p {
     padding-left: 6rem;
     align-items: left;
-}
-.text-syle span{
+  }
+  
+  .text-style span {
     font-size: 2rem;
-}
-
-.text-style ul{
-
+  }
+  
+  .text-style ul {
     padding-left: 8rem;
     padding-right: 8rem;
-}
-.text-style li{
+  }
+  
+  .text-style li {
     align-items: center;
     color: var(--titles);
-}
-.center-text{
+  }
+  
+  .center-text {
     text-align: center;
-}
+  }
+
+  
 .contenedor{
     max-width: 120rem;
     margin: 0 auto;
@@ -112,9 +144,9 @@ body{
 /* General navbar styles */
 .navbar {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 0;  /* Add some top and bottom padding */
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Align items vertically */
+    padding: 1rem 2rem; /* Add some padding */
   }
   
   .navbar ul {
@@ -125,6 +157,7 @@ body{
   }
   
   .navbar li {
+    display: inline-block; /* Make list items inline-block */
     margin-right: 1.5rem; /* Use rem for better responsiveness */
   }
   
@@ -143,9 +176,69 @@ body{
   }
   
   
+  /* General Styles */
+.left-picture {
+  max-width: 100%; /* Ensure image scales responsively */
+}
+
+/* Mobile Devices (320px - 480px) */
+@media (max-width: 480px) {
+  /* Hide the logo on smaller screens */
+  .left-picture {
+    display: none;
+  }
+
+  /* Stack navbar elements vertically */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    margin-top: 1rem; /* Add space between logo and list */
+  }
+
+  /* Adjust font sizes for smaller screens */
+  .titlemain h1 {
+    font-size: 2rem;
+  }
+
+  .titlemain h2 {
+    font-size: 2.5rem;
+  }
+
+  .titlemain h3 {
+    font-size: 1.2rem;
+  }
+
+  .text-style {
+    font-size: 1.2rem;
+  }
+}
+
+/* iPads & Tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Similar styles as Mobile Devices with slight adjustments */
+  .titlemain h1 {
+    font-size: 2.5rem;
+  }
+
+  .titlemain h2 {
+    font-size: 3rem;
+  }
+
+  .titlemain h3 {
+    font-size: 1.3rem;
+  }
+
+  .text-style {
+    font-size: 1.3rem;
+  }
+}
 /* Responsive behavior using media queries */
 @media (max-width: 768px) {
     /* Hide the logo on smaller screens */
+    
     .left-picture {
       display: none;
     }
@@ -188,13 +281,39 @@ body{
       width: 25rem;
     }
 }
+
+/* Desktops & Large Screens (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  /* Adjust font sizes and layouts as needed for larger screens */
+  /* You can adjust these values based on your design preferences */
+  .titlemain h1 {
+    font-size: 3.5rem;
+  }
+
+  .titlemain h2 {
+    font-size: 4.5rem;
+  }
+}
+
+/* Extra Large Screens & TV (1201px and above) */
+@media (min-width: 1201px) {
+  /* Adjust font sizes and layouts as needed for very large screens */
+  /* You can adjust these values based on your design preferences */
+  .titlemain h1 {
+    font-size: 4rem;
+  }
+
+  .titlemain h2 {
+    font-size: 5rem;
+  }
+}
+
   
 
 /*No reapeat same image*/
 .indexImage{
     background-image: url(../img/fondo1-01.jpg);
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 
@@ -203,19 +322,16 @@ body{
 .backgroundImage{
     background-image: url(../img/fondo-1-color-01.jpg);
     background-position:top center;
-    background-repeat: no-repeat;
     background-size: cover;
 }
 .motifImage{
     background-image: url(../img/fondo2-01.jpg);
     background-position:top center;
-    background-repeat: no-repeat;
     background-size: cover;
 }
 .programImage{
     background-image: url(../img/fondo-2-color-01.jpg);
     background-position: top center;
-    background-repeat: no-repeat;
     background-size: cover;
 }
 .referencesImage{
@@ -223,4 +339,13 @@ body{
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Adjust background size for smaller screens */
+    .backgroundImage,
+    .motifImage,
+    .programImage {
+      background-size: contain; /* Maintain aspect ratio */
+    }
 }
